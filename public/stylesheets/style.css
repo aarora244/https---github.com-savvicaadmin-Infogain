@@ -1,0 +1,30 @@
+body {
+  padding: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+}
+li { 
+list-style-type: none; }
+
+#wrap{
+	width:150px;
+}
+#wrapper {
+  width:100%;
+  clear:both;
+}
+#first {
+  width:200px;
+  float:left;
+}
+#second {
+  width:500px;
+  height:190px;
+  float:left;
+}
+#third {
+	position:relative;
+  float:right;
+}

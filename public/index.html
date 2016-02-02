@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app='scomodule'>
+<head>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+</head>
+<body ng-controller='fetchModule' ng-init="getModules()">
+	<div ng-include="'views/include/header.html'"></div>
+	<div class="row">
+		<div class="col-sm-2" ng-include="'views/include/leftPanel.html'"></div>
+		<div class="col-sm-6" ng-view></div>
+	</div>
+	<div ng-include="'views/include/footer.html'"></div>
+	<script src="js/checkValue.js"></script>
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.js"></script>
+	<script src="/scripts/angularRoute.js"></script><script src="/scripts/controllers/modulecontroller.js" ></script>
+<script  src="/scripts/controllers/actioncontroller.js"></script>
+</body>
+</html>

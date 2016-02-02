@@ -1,0 +1,24 @@
+{
+  "name": "Day4_Practice1",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.4.9",
+    "body-parser": "*",
+    "dialog": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-validator": "*",
+    "mongoose": "*",
+    "mv": "*",
+    "mysql": "*"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.9",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.3"
+  }
+}

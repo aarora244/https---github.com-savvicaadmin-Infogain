@@ -1,0 +1,80 @@
+<script>
+
+
+</script>
+<div ng-init="getActionData()" ng-show="feature_id">
+	
+	<form action="/save" method="get" accept-charset="utf-8">
+	<div class="panel-heading">
+		<div align="left"><b>Feature:</b><span ng-repeat="x in data.feature1">{{x.feature_name}}</span></div>
+	</div>
+	<div align="right"><input type="reset" value="Uncheck All" class="btn btn-primary"/></div><br/>
+		<table border="2" cellpadding="6" cellspacing="6"
+			class="table table-striped" ng-show="flag">
+			<tr>
+				<th>Actions</th>
+				<th ng-repeat="y in data.roles">{{y.role_name}}</th>
+			</tr>
+			<tr ng-repeat="z in data.action" ng-if="z.Action_Type=='1 Way'">
+				<td>{{z.Title}}</td>
+				<td ng-repeat="y in data.roles">
+					<center>
+						<input type="checkbox" name="checkbox{{y.role_name}}"
+							value="{{z.Action_id}}~{{y.role_id}}" />
+					</center>
+				</td>
+			</tr>
+		</table>
+		<table border="2" cellpadding="6" cellspacing="6"
+			class="table table-striped" ng-repeat="z in data.action"
+			ng-if="z.Action_Type=='2 Way'">
+
+			<th ng-repeat="x in data.feature1">Feature:{{x.feature_name}}<br/>
+				Action:{{z.Title}}</th>
+			<th ng-repeat="y in data.roles">{{y.role_name}}</th>
+			</tr>
+
+
+			<tr ng-repeat="y in data.roles">
+				<td>{{y.role_name}}</td>
+				<td>
+					<center>
+						<input type="checkbox" name="checkbox2{{y.role_name}}"
+							value="{{z.Action_id}}~{{y.role_id}}~{{data.roles[0].role_id}}" />
+					</center>
+				</td>
+				<td><center>
+						<input type="checkbox" name="checkbox2{{y.role_name}}"
+							value="{{z.Action_id}}~{{y.role_id}}~{{data.roles[1].role_id}}" />
+					</center></td>
+				<td>
+					<center>
+						<input type="checkbox" name="checkbox2{{y.role_name}}"
+							value="{{z.Action_id}}~{{y.role_id}}~{{data.roles[2].role_id}}" />
+					</center>
+				</td>
+				<td><center>
+						<input type="checkbox" name="checkbox2{{y.role_name}}"
+							value="{{z.Action_id}}~{{y.role_id}}~{{data.roles[3].role_id}}" />
+					</center></td>
+				<td>
+					<center>
+						<input type="checkbox" name="checkbox2{{y.role_name}}"
+							value="{{z.Action_id}}~{{y.role_id}}~{{data.roles[4].role_id}}" />
+					</center>
+				</td>
+			</tr>
+			
+		</table>
+		<div align="right">
+			<input type="button" value="Save" class="btn btn-primary"
+				onClick="alertCheckValueJS()" />
+				<input type="hidden" id="featureid" name="featureid"
+				value="{{data.feature_id}}" />
+				<input type="hidden" id="schoolid" name="schoolid"
+				value="{{data.school_id}}" />
+		</div>
+	</form>
+
+</div>
+

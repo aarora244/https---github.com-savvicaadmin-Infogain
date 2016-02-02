@@ -1,0 +1,12 @@
+<div class="jumbotron" style="height:440px;">
+	<ul ng-repeat="x in data.modules" 
+		>
+		<b data-toggle="collapse" data-target="#{{x.feature_name}}" style="cursor: pointer;">{{x.feature_name}}</b>
+		<div id="{{x.feature_name}}" class="collapse">
+				<span ng-repeat="y in data.features" ng-if="x.feature_id===y.parent_feature_id">
+					<li><a href="#/action/{{school_id}}/{{y.feature_id}}">{{y.feature_name}}</a>
+				</li>
+				</span>
+			</div>
+	</ul>
+</div>
